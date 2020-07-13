@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hospital Outpatient Experience</title>
+    <link rel="stylesheet" href="/static/CustomerMain.css">
+    <meta name="viewport" >
+  </head>
+  <body>
+
+<div class="contact-section">
+
+  <h1>Fill the details for appointment</h1>
+  <div class="border"></div>
+  <form class="contact-form" action="/main" method="post">
+    <input type="text" class="contact-form-text" placeholder="Your name" name="name">
+    <input type="email" class="contact-form-text" placeholder="Your email" name="email">
+    <input type="text" class="contact-form-text" placeholder="Your phone" name="phone">
+    <textarea class="contact-form-text" placeholder="Your problem" name="problem"></textarea>
+    <input type="submit" class="contact-form-btn" value="Send">
+    <input type="submit" class="contact-form-btn" value="Your status">
+    <br><br><br>
+  </form>
+  <div>
+      <h1>Total appointments in process</h1>
+    {% for i in tt %}
+      <li>
+        <h1>{{i}}</h1>
+      </li>
+      {% endfor %}
+      <br><br>
+      <h1 style="background-color:black;">Your appointment number is:{{len}}</h1>
+  </div>
+</div>
+
+  </body>
+</html>
